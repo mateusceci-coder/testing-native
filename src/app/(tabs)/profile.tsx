@@ -1,9 +1,11 @@
-import { View, Text, Image } from "react-native";
-import ArtistProfileContainer from "../../components/ArtistProfileContainer";
+import { View, Text, Image, ScrollView } from "react-native";
+import ArtistProfileContainer from "../../components/Profile/ArtistProfileContainer";
+import AwardsProfile from "../../components/Profile/AwardsProfile";
+import ReviewsProfile from "../../components/Profile/ReviewsProfile";
 
 export default function Profile() {
   return (
-    <View className="flex-1 p-4 mt-10">
+    <ScrollView className="flex-1 p-4 mt-10">
       <ArtistProfileContainer />
       <View className="my-10">
         <View className="gap-2 mb-4">
@@ -24,19 +26,8 @@ export default function Profile() {
           <Text>Florianópolis - SC</Text>
         </View>
       </View>
-      <View className="gap-2">
-        <View className="border-b-2">
-          <Text className="font-bold">Conquistas e Prêmios</Text>
-        </View>
-        <View className="border-2 border-gray-500 rounded-xl">
-          <Image
-            source={require("../../../public/trophy.png")} />
-          <View className="p-2">
-            <Text className="font-bold text-lg">1o lugar na Tattoo Fest Floripa 2023</Text>
-          </View>
-
-        </View>
-      </View>
-    </View>
+      <AwardsProfile />
+      <ReviewsProfile />
+    </ScrollView>
   );
 }
