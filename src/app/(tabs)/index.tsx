@@ -1,14 +1,14 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import SearchInput from "../../components/SearchInput";
 import TattooContainer from "../../components/TattooContainer";
 
 export default function Index () {
   return (
-    <View className="flex-1 gap-2 text-xl items-center bg-white pt-20">
+    <ScrollView className="flex-1 gap-2 text-xl bg-white">
         <SearchInput />
         <TattooContainer />
         <TattooContainer />
         <TattooContainer />
-    </View>
+    </ScrollView>
   )
 }
