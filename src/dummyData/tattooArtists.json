@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "latitude": -27.595377,
+    "longitude": -48.548050,
+    "name": "Tattoo Artist A",
+    "rating": 4.8,
+    "image": "https://example.com/images/tattoo-artist-a.jpg",
+    "description": "Specializes in intricate black and grey designs with a focus on realism.",
+    "reviews": 120
+  },
+  {
+    "id": 2,
+    "latitude": -27.597644,
+    "longitude": -48.529758,
+    "name": "Tattoo Artist B",
+    "rating": 4.5,
+    "image": "https://example.com/images/tattoo-artist-b.jpg",
+    "description": "Known for vibrant color tattoos and unique custom designs.",
+    "reviews": 95
+  },
+  {
+    "id": 3,
+    "latitude": -27.589543,
+    "longitude": -48.543030,
+    "name": "Tattoo Artist C",
+    "rating": 4.7,
+    "image": "https://example.com/images/tattoo-artist-c.jpg",
+    "description": "Expert in traditional tattoos with bold lines and classic motifs.",
+    "reviews": 110
+  },
+  {
+    "id": 4,
+    "latitude": -27.586925,
+    "longitude": -48.551315,
+    "name": "Tattoo Artist D",
+    "rating": 4.6,
+    "image": "https://example.com/images/tattoo-artist-d.jpg",
+    "description": "Specializes in minimalistic and geometric tattoo designs.",
+    "reviews": 80
+  },
+  {
+    "id": 5,
+    "latitude": -27.591086,
+    "longitude": -48.523472,
+    "name": "Tattoo Artist E",
+    "rating": 4.9,
+    "image": "https://example.com/images/tattoo-artist-e.jpg",
+    "description": "Renowned for portrait tattoos and hyper-realistic art.",
+    "reviews": 150
+  }
+]
