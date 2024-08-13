@@ -53,6 +53,13 @@ export default function Icon() {
     );
   }, []);
 
+  const florianopolisRegion = {
+    latitude: -27.5954,
+    longitude: -48.548,
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.042,
+  };
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <View className="flex flex-1 items-center justify-center text-xl">
@@ -61,7 +68,7 @@ export default function Icon() {
           <MapView
             className="flex-1 w-full"
             provider={PROVIDER_GOOGLE}
-            region={region}
+            region={florianopolisRegion}
             showsUserLocation
             showsMyLocationButton
             loadingEnabled
