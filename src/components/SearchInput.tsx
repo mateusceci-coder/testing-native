@@ -4,7 +4,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 export default function SearchInput() {
   return (
-    <View className="mt-12 p-2 w-full">
+    <View className="mt-12 p-2">
       <Text className="font-bold ml-2 mb-2">Estilo de tatuagem</Text>
       <View className="flex-row items-center gap-3">
         <View
