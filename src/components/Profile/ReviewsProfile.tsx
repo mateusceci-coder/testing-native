@@ -10,7 +10,7 @@ export default function ReviewsProfile() {
       <View className="flex-row justify-between ">
         <View className="flex-row gap-1 max-w-[60%]">
           <Image
-            source={require("../../../public/review1.png")}
+            source={require("../../images/review1.png")}
             className="h-20 w-20"
           />
           <View>
@@ -29,7 +29,7 @@ export default function ReviewsProfile() {
       <View className="flex-row justify-between">
         <View className="flex-row gap-1 max-w-[60%]">
           <Image
-            source={require("../../../public/review2.png")}
+            source={require("../../images/review2.png")}
             className="h-20 w-20"
           />
           <View>
