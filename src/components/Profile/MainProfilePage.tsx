@@ -28,7 +28,7 @@ export default function MainProfilePage({ navigation }) {
       <View className="flex-row justify-between mb-8">
         <View className="flex-row">
           <Image
-            source={require("../../../public/ellipse.png")}
+            source={require("../../images/ellipse.png")}
             className="w-16 h-16"
           />
           <View className="ml-4">
@@ -54,7 +54,7 @@ export default function MainProfilePage({ navigation }) {
             </Text>
           </View>
           <Image
-            source={require("../../../public/tatu.png")}
+            source={require("../../images/tatu.png")}
             className="w-40 h-40 ml-4"
           />
         </View>
