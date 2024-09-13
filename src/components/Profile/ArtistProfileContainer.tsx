@@ -6,7 +6,7 @@ export default function ArtistProfileContainer() {
     <View className="p-4 rounded-xl flex-row bg-white justify-between">
       <View className="gap-2">
         <Image
-          source={require("../../../public/profile.png")}
+          source={require("../../images/profile.png")}
           className="h-20 w-20"
         />
         <Text className="font-bold">Zé da tainha</Text>
