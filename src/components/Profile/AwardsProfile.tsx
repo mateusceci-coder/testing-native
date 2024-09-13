@@ -9,7 +9,7 @@ export default function AwardsProfile() {
       <View className="w-[135px]">
         <View className="border-2 border-gray-500 rounded-xl">
           <Image
-            source={require("../../../public/trophy.png")}
+            source={require("../../images/trophy.png")}
             resizeMode="contain"
           />
           <View className="p-2">
