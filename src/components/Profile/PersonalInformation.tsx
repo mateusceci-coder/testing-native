@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { Button, Text, TextInput, View } from "react-native";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { personalInformationSchema } from "../../../lib/schemas";
 
 export default function PersonalInformation() {
   const initialInformations = [
@@ -26,6 +28,7 @@ export default function PersonalInformation() {
   ];
 
   const { control, handleSubmit, reset } = useForm({
+    resolver: zodResolver(personalInformationSchema),
     defaultValues: initialInformations.reduce(
       (acc, item) => ({ ...acc, [item.name]: item.value }),
       {}
@@ -40,7 +43,7 @@ export default function PersonalInformation() {
 
   const handleCancel = () => {
     setIsEditing(false);
-    reset(); // Resetar os valores para os iniciais
+    reset();
   };
 
   const handleConfirm = (data) => {

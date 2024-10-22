@@ -1,4 +1,5 @@
 export type TattooContainerType = {
+  id: string;
   name: string;
   specialties: string;
   tattoo: string;
@@ -6,4 +7,5 @@ export type TattooContainerType = {
   image: string;
   rating: number;
   profile: string;
-}
+  like: boolean;
+};
