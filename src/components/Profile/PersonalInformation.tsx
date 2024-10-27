@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { Button, Text, TextInput, View } from "react-native";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { personalInformationSchema } from "../../../lib/schemas";
+import { personalInformationSchema } from "../../lib/schemas";
 
 export default function PersonalInformation() {
   const initialInformations = [

@@ -16,9 +16,9 @@ export default function Wishlist() {
           <Entypo name="magnifying-glass" size={24} color="black" />
         </View>
       </View>
-      {wishlistItems.map((item) => (
+      {/* {wishlistItems.map((item) => (
         <TattooContainer key={item.id} {...item} />
-      ))}
+      ))} */}
     </ScrollView>
   );
 }

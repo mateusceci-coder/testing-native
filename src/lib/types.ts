@@ -1,11 +1,13 @@
+import { ImageSourcePropType } from "react-native";
+
 export type TattooContainerType = {
   id: string;
   name: string;
   specialties: string;
   tattoo: string;
   price: number;
-  image: string;
+  image: ImageSourcePropType;
   rating: number;
-  profile: string;
+  profile: ImageSourcePropType;
   like: boolean;
 };
