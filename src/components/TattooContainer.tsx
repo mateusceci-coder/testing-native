@@ -19,7 +19,7 @@ export default function TattooContainer({
       <Animated.View
         entering={FadeInRight}
         exiting={FadeOutLeft}
-        className="p-4 gap-2 my-4"
+        className="p-4 gap-2 my-1"
       >
         <View className="relative w-full h-[180px] mb-2">
           {like ? (
