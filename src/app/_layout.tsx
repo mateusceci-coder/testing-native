@@ -1,9 +1,17 @@
-import { Stack } from "expo-router/stack"
+import { Stack } from "expo-router/stack";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-export default function AppLayout () {
+const queryClient = new QueryClient();
+
+export default function AppLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{headerShown: false, headerTintColor: 'white'}} />
-    </Stack>
-  )
+    <QueryClientProvider client={queryClient}>
+      <Stack>
+        <Stack.Screen
+          name="(tabs)"
+          options={{ headerShown: false, headerTintColor: "white" }}
+        />
+      </Stack>
+    </QueryClientProvider>
+  );
 }
