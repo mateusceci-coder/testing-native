@@ -23,16 +23,15 @@ const TattooArtistListItem = ({
         <View className="gap-1">
           <View className="flex-row justify-between">
             <Text className="font-bold mb-2">{artist.name}</Text>
-            <AntDesign name="hearto" size={16} color="black" />
           </View>
-          <Text className="text-sm text-gray-500">{artist.description}</Text>
+          <Text className="text-sm text-gray-500">
+            {artist.metadata.biography}
+          </Text>
         </View>
         <View className="gap-2 flex-row items-center">
           <AntDesign name="star" size={16} color="black" />
           <View className="gap-1">
-            <Text>
-              {artist.rating} ({artist.reviews})
-            </Text>
+            <Text>5 (200)</Text>
           </View>
         </View>
       </View>

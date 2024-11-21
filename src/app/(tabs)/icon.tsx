@@ -13,11 +13,18 @@ import TattooArtists from "../../dummyData/tattooArtists.json";
 import TattooArtistListItem from "../../components/map/TattooArtistListItem";
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { useGetArtists } from "../../../hooks/useGetArtists";
+import axios from "axios";
 
 export default function Icon() {
   const [location, setLocation] = useState<LocationObject | null>(null);
   const [region, setRegion] = useState<Region | undefined>(undefined);
   const [selectArtist, setSelectArtist] = useState(null);
+  const { data } = useGetArtists();
+
+  const artists = data?.filter((artist) =>
+    artist.role.includes("tattooArtist")
+  );
 
   const snapPoints = useMemo(() => [80, "50%", "90%"], []);
 
@@ -62,7 +69,7 @@ export default function Icon() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <View className="flex flex-1 items-center justify-center text-xl">
+      <View className="flex flex-1 items-center text-xl">
         <SearchInput />
         {location && (
           <MapView
@@ -73,13 +80,13 @@ export default function Icon() {
             showsMyLocationButton
             loadingEnabled
           >
-            {TattooArtists.map((tattooArtist) => (
+            {artists?.map((tattooArtist) => (
               <Marker
                 onPress={() => setSelectArtist(tattooArtist)}
                 key={tattooArtist.id}
                 coordinate={{
-                  latitude: tattooArtist.latitude,
-                  longitude: tattooArtist.longitude,
+                  latitude: tattooArtist.location.latitude,
+                  longitude: tattooArtist.location.longitude,
                 }}
                 title={tattooArtist.name}
                 description="Testing"
@@ -103,12 +110,12 @@ export default function Icon() {
           />
         )}
 
-        <BottomSheet snapPoints={snapPoints} index={0} >
+        <BottomSheet snapPoints={snapPoints} index={0}>
           <Text className="text-center font-bold text-xl mb-4 mt-2">
-            Over {TattooArtists.length} places
+            Over {artists?.length} places
           </Text>
           <BottomSheetFlatList
-            data={TattooArtists}
+            data={artists}
             contentContainerStyle={{ gap: 10, padding: 10 }}
             renderItem={({ item }) => <TattooArtistListItem artist={item} />}
           />
