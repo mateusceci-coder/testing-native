@@ -5,6 +5,7 @@ import PersonalInformation from "../../components/Profile/PersonalInformation";
 import SecurityProfile from "../../components/Profile/SecurityProfile";
 import PaymentsProfile from "../../components/Profile/PaymentsProfile";
 import PaymentMethods from "../../components/Profile/PaymentMethods";
+import LoginPage from "@/components/LoginPage";
 
 export default function Profile() {
   const Stack = createNativeStackNavigator();
@@ -17,7 +18,7 @@ export default function Profile() {
         name="Informações Pessoais"
         component={PersonalInformation}
       />
-      <Stack.Screen name="Login e Segurança" component={SecurityProfile} />
+      <Stack.Screen name="Login e Segurança" component={LoginPage} />
       <Stack.Screen name="Pagamentos" component={PaymentsProfile} />
       <Stack.Screen name="Formas de Pagamento" component={PaymentMethods} />
     </Stack.Navigator>
